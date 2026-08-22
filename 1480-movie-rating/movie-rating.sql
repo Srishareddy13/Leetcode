@@ -1,4 +1,4 @@
-/*(select name as results from movierating 
+(select name as results from movierating 
 join users using(user_id)
 group by name
 order by count(*) desc,name 
@@ -11,9 +11,9 @@ join movies using(movie_id)
 where created_at between '2020-02-01' and '2020-02-29'
 group by title
 order by avg(rating) desc,title
-limit 1) */
+limit 1) 
 
-(
+/*(
     SELECT u.name AS results
     FROM Users u
     JOIN MovieRating mr
@@ -35,4 +35,4 @@ UNION ALL
     GROUP BY m.movie_id, m.title
     ORDER BY AVG(mr.rating) DESC, m.title ASC
     LIMIT 1
-);
+);*/
