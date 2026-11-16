@@ -3,10 +3,9 @@ class Solution {
         HashMap<Integer,Integer> map=new HashMap<>();
 
         for(int i=0;i<nums.length;i++){
-            int res=target-nums[i];
-
-            if(map.containsKey(res)){
-                int[] arr={map.get(res),i};
+            int result=target-nums[i];
+            if(map.containsKey(result)){
+                int[] arr={map.get(result),i};
                 return arr;
             }
             map.put(nums[i],i);
